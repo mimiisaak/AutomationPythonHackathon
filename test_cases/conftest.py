@@ -62,10 +62,14 @@ def my_mobile_starter(request):
     driver.quit()
 
 
+# @pytest.fixture(scope='class')
+# def my_api_starter(request):
+#     print()
 @pytest.fixture(scope='class')
-def my_api_starter(request):
-    print()
-
+def init_api(request):
+    # url = get_data("base_url")
+    url='http://localhost:3000'
+    request.cls.url = url
 
 @pytest.fixture(scope='class')
 def my_desktop_starter(request):

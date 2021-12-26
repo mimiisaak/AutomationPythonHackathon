@@ -1,5 +1,5 @@
 import pytest
-from utils.conftest import my_web_starter
+from test_cases.conftest import my_web_starter
 
 
 @pytest.mark.usefixtures("my_web_starter")
